@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite o valor do salário mínimo atual: ");
+        double salarioMinimo = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite o valor do salário do funcionário: ");
+        double salarioFuncionario = Convert.ToDouble(Console.ReadLine());
+
+        double quantidadeSalariosMinimos = salarioFuncionario / salarioMinimo;
+
+        Console.WriteLine("O funcionário ganha ." + quantidadeSalariosMinimos);
+    }
+}

@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite a medida do primeiro ângulo (em graus): ");
+        double angulo1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite a medida do segundo ângulo (em graus): ");
+        double angulo2 = Convert.ToDouble(Console.ReadLine());
+
+        if (angulo1 <= 0 || angulo2 <= 0 || angulo1 + angulo2 >= 180)
+        {
+            Console.WriteLine("Os ângulos fornecidos são inválidos. A soma dos dois ângulos deve ser menor que 180 graus e cada ângulo deve ser maior que 0.");
+        }
+        else
+        {
+            double angulo3 = 180 - (angulo1 + angulo2);
+
+            Console.WriteLine($"A medida do terceiro ângulo é:" + angulo3);
+        }
+    }
+}

@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite o valor da base maior: ");
+        double baseMaior = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite o valor da base menor: ");
+        double baseMenor = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite o valor da altura: ");
+        double altura = Convert.ToDouble(Console.ReadLine());
+
+        double area = ((baseMaior + baseMenor) * altura) / 2;
+
+        Console.WriteLine($"A área do trapézio é: "+ area);
+    }
+}

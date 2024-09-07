@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite a quantidade de segundos passados desde o início do dia: ");
+        int segundosTotais = Convert.ToInt32(Console.ReadLine());
+
+        if (segundosTotais < 0 || segundosTotais >= 86400)
+        {
+            Console.WriteLine("Valor inválido. A quantidade de segundos deve estar entre 0 e 86399.");
+        }
+        else
+        {
+            int horas = segundosTotais / 3600;
+            int minutos = (segundosTotais % 3600) / 60;
+            int segundos = segundosTotais % 60;
+
+            Console.WriteLine("Horas: " + horas);
+            Console.WriteLine("Minutos: " + minutos);
+            Console.WriteLine("Segundos: " + segundos);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite o valor do salário a ser pago: ");
+        int salario = Convert.ToInt32(Console.ReadLine());
+
+        int[] notas = { 200, 100, 50, 20, 10, 5, 2, 1 };
+        
+        int valorRestante = salario;
+
+        foreach (int nota in notas)
+        {
+            int quantidadeNotas = valorRestante / nota;
+
+            valorRestante %= nota;
+
+            if (quantidadeNotas > 0)
+            {
+                Console.WriteLine($"{quantidadeNotas} nota(s) de R$ {nota}");
+            }
+        }
+    }
+}
